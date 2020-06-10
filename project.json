@@ -1,0 +1,26 @@
+{
+    "name": "bristle",
+    "version": "0.1.0-dev",
+    "summary": "Clean as a whistle!",
+    "developers": {
+        "jochenseeber": {
+            "name": "Jochen Seeber",
+            "email": "jochen@seeber.me"
+        }
+    },
+    "language": {
+        "ruby": {
+            "version": "2.6.6"
+        }
+    },
+    "presets": {
+        "github": {
+            "user": "jochenseeber"
+        },
+        "common": true,
+        "ruby": {
+            "minitest": false
+        },
+        "vscode": true
+    }
+}

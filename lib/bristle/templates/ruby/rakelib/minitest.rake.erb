@@ -1,0 +1,17 @@
+# frozen_string_literal: true
+
+require "rake/testtask"
+
+Rake::TestTask.new("minitest:test") do |t|
+  t.libs << "generated" << "test"
+  t.test_files = FileList["test/**/*_test.rb"]
+  <%- if project.test_metrics.key?(:simplecov) %>
+  t.ruby_opts = ["-r", "simplecov_config"]
+  <%- end %>
+  t.warning = false
+end
+
+desc "Run tests"
+task "test" => %w[generate minitest:test]
+
+task "release" => "test"

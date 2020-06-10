@@ -1,0 +1,22 @@
+# frozen_string_literal: true
+
+desc "Run QED tests"
+task "qed:test" do
+  <%- 
+  command = "qed -I lib -I test"
+
+  if project.test_metrics.key?(:simplecov)
+    command += " -p coverage"
+  end
+  %>
+  if Rake.verbose == true
+    sh <%= (command + " -v").to_json %>
+  else
+    sh <%= command.to_json %>
+  end
+end
+
+desc "Run tests"
+task "test" => %w[generate qed:test]
+
+task "release" => "test"

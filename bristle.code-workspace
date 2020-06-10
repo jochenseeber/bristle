@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "bristle Workspace"
+    }
+  ],
+  "settings": {
+    "git.ignoreLimitWarning": true,
+    "editor.formatOnSave": true,
+    "ruby.useBundler": true,
+    "ruby.useLanguageServer": true,
+    "ruby.lint": {
+      "rubocop": {
+        "useBundler": true
+      }
+    }
+  }
+}

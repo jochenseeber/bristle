@@ -1,0 +1,13 @@
+*~
+.DS_Store
+/.bundle/
+/.yardoc/
+/build/
+/doc/
+/embedded/
+/generated/
+/log/
+/pkg/
+/tmp/
+/vendor/bundle/
+\#*\#

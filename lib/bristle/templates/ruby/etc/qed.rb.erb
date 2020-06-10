@@ -1,0 +1,13 @@
+# frozen_string_literal: true
+<%- if project.test_metrics.key?(:simplecov) %>
+
+QED.configure "coverage" do
+  require "simplecov"
+
+  SimpleCov.configure do
+    command_name "Demos"
+  end
+
+  require File.expand_path("../test/simplecov_config.rb", __dir__)
+end
+<%- end %>
